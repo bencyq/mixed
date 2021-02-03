@@ -10,7 +10,7 @@
 
 在桌面上新建文件夹，进入后右键，点击Git Bash Here
 
- ![image-20210203100121090](D:\git学习笔记\picture\image-20210203100121090.png)
+ ![image-20210203100121090](picture/image-20210203100121090.png)
 
 ### 常用指令
 
@@ -27,7 +27,7 @@ git config --global user.email '876687019@qq.com'  # 配置邮箱
 git config --list  # 查看设置
 ```
 
-![image-20210203101512829](D:\git学习笔记\picture\image-20210203101512829.png)	
+![image-20210203101512829](picture\image-20210203101512829.png)	
 
 ### 创建Git仓库
 
@@ -37,7 +37,7 @@ git config --list  # 查看设置
 git init  # 初始化仓库，会生成一个隐藏文件'.git'
 ```
 
-![image-20210203101731044](D:\git学习笔记\picture\image-20210203101731044.png)	
+![image-20210203101731044](picture\image-20210203101731044.png)	
 
 ### 向仓库中添加文件
 
@@ -59,13 +59,14 @@ git add --all  # 将全部文件发送到暂存区
 git commit -m '修改过的文件'  # 将文件提交到仓库
 ```
 
-<img src="D:\git学习笔记\picture\image-20210203103950617.png" alt="image-20210203103950617" style="zoom:90%;" />	<img src="D:\git学习笔记\picture\image-20210203104211278.png" alt="image-20210203104211278" style="zoom:90%;" />	
+<img src="picture\image-20210203103950617.png" alt="image-20210203103950617" style="zoom:90%;" />	<img src="picture\image-20210203104211278.png" alt="image-20210203104211278" style="zoom:90%;" />	
 
 ### 删除文件
 
 ```bash
 rm test.txt  # 删除工作区的文件
-git rm test.txt  # 将删除指令提交到暂存区
+git rm test.txt  # 将删除指令提交到暂存区  命令删除一个目录中的一个或者多个文件或者目录，只用rm命令不会删除目录，通常文件通常可以恢。
+git rm -rf  # 删除当前目录下的所有文件,这个命令很危险，应避免使用。
 git commit -m '删除test.txt'  # 允许暂存区的操作，删除仓库文件
 ```
 
