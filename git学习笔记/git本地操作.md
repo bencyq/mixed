@@ -55,6 +55,7 @@ vim test.txt  # 修改仓库文件
 :wq  # 修改完后点esc，输入:wq，再按enter来保存
 cat test.txt  # 查看文件内容
 git add text.txt  # 修改后，重新将文件从工作区添加到暂存区
+git add --all  # 将全部文件发送到暂存区
 git commit -m '修改过的文件'  # 将文件提交到仓库
 ```
 
