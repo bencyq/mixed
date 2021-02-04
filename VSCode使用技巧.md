@@ -8,6 +8,6 @@
 
 - 在另外一台电脑上，登录gist.github.com来找到自己的gist ID，并通过ctrl+shift+p搜索sync的配置来填写ID
 
-  ![image-20210204211425688](C:\Users\MACHENIKE\AppData\Roaming\Typora\typora-user-images\image-20210204211425688.png)	
+  ![image-20210204211425688](picture\image-20210204211425688.png)	
 
 - 输入shift+alt+D来下载配置
