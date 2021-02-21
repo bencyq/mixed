@@ -27,7 +27,7 @@ git config --global user.email '876687019@qq.com'  # 配置邮箱
 git config --list  # 查看设置
 ```
 
-![image-20210203101512829](picture\image-20210203101512829.png)	
+![image-20210203101512829](picture/image-20210203101512829.png)	
 
 ### 创建Git仓库
 
@@ -37,7 +37,7 @@ git config --list  # 查看设置
 git init  # 初始化仓库，会生成一个隐藏文件'.git'
 ```
 
-![image-20210203101731044](picture\image-20210203101731044.png)	
+![image-20210203101731044](picture/image-20210203101731044.png)	
 
 ### 向仓库中添加文件
 
@@ -59,7 +59,7 @@ git add --all  # 将全部文件发送到暂存区
 git commit -m '修改过的文件'  # 将文件提交到仓库
 ```
 
-<img src="picture\image-20210203103950617.png" alt="image-20210203103950617" style="zoom:90%;" />	<img src="picture\image-20210203104211278.png" alt="image-20210203104211278" style="zoom:90%;" />	
+<img src="picture/image-20210203103950617.png" alt="image-20210203103950617" style="zoom:90%;" />	<img src="picture/image-20210203104211278.png" alt="image-20210203104211278" style="zoom:90%;" />	
 
 ### 删除文件
 
