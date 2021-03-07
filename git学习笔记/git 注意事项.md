@@ -14,9 +14,11 @@
 
 ## 出现无法 push/pull 的现象
 
-### Failed to connect to github.com port 443: Timed out
+### port  ==443==：Timed out
 
 #### 错误信息
+
+`Failed to connect to github.com port 443: Timed out`
 
 如下图所示
 
@@ -33,3 +35,21 @@ git提示Failed to connect to github.com port 443: Timed out
 #### 解决方案
 
 ![image-20210307225714996](../picture/image-20210307225714996.png)
+
+### errno ==10054==
+
+#### 错误信息
+
+`error: RPC failed; curl 28 OpenSSL SSL_read: Connection was reset, errno 10054` 
+
+如下图所示
+
+![image-20210307232250041](..//picture/image-20210307232250041.png)
+
+#### 原因
+
+这是服务器的SSL证书没有经过第三方机构的签署，所以报错
+
+#### 解决方案
+
+`git config --global http.sslVerify "false"`
