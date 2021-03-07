@@ -32,9 +32,24 @@ git提示Failed to connect to github.com port 443: Timed out
 
 默认使用了代理
 
-#### 解决方案
+#### 解决方案一
 
 ![image-20210307225714996](../picture/image-20210307225714996.png)
+#### 解决方案二
+
+输入
+
+```bash
+git config --global http.proxy http://127.0.0.1:7890
+
+git config --global https.proxy http://127.0.0.1:7890
+```
+
+上述代码块中的 http 网址来自于
+
+![image-20210307234827404](../picture/image-20210307234827404.png)	
+
+获取方法参照 [<u>解决方案一</u>](#解决方案一)
 
 ### errno ==10054==
 
