@@ -66,6 +66,10 @@ git config --global user.email "xxx"：修改自己的邮箱地址
 
  
 
+git stash 取消了仓库里的文件修改
+
+
+
 git clean -d -fx：表示删除 一些 没有 git add 的 文件；打开SourceTree通过命令行，进入本地版本仓库目录下，直接执行
 
 git clean 参数 ：
@@ -83,6 +87,3 @@ Git diff branch1 branch2 --stat                 //显示出所有有差异的文
 Git diff branch1 branch2 文件名(带路径)   //显示指定文件的详细差异
 
 Git diff branch1 branch2                          //显示出所有有差异的文件的详细差异
-————————————————
-版权声明：本文为CSDN博主「善良勤劳勇敢而又聪明的老杨」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/yy339452689/article/details/104016644
