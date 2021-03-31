@@ -1,4 +1,4 @@
-# 注意事项z
+# 常见问题
 
 ## 尽量避免使用绝对路径
 
@@ -68,3 +68,25 @@ git config --global https.proxy http://127.0.0.1:7890
 #### 解决方案
 
 `git config --global http.sslVerify "false"`
+
+### warning: LF will be replaced by ==CRLF==
+
+#### 错位信息
+
+`warning: LF will be replaced by CRLF`
+
+![image-20210331112926817](picture/git%20%E6%9C%AC%E5%9C%B0%E6%93%8D%E4%BD%9C.md)
+
+#### 原因
+
+- Mac os 和 linux 系统用 LF 换行（即\n）
+- windows 系统用 CRLF 换行（即 \r\n）
+
+
+- 所以 Unix/Mac 系统下的文件在 Windows 里打开的话，所有文字会变成一行
+- 而Windows里的文件在Unix/Mac下打开的话，在每行的结尾可能会多出一个^M符号
+- Linux保存的文件在windows上用记事本看的话会出现黑点
+
+#### 解决方案
+
+使用` git config --global core.autocrlf true ` 来自动转换换行符和回车换行符
