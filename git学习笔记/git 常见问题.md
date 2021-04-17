@@ -30,7 +30,11 @@ git提示Failed to connect to github.com port 443: Timed out
 
 #### 原因
 
-默认使用了代理
+443 报错是因为出现了网络问题：
+
+1. 是否使用了代理
+2. 代理的节点是否有问题
+3. git 是否认定该代理是安全的
 
 #### 解决方案一
 
@@ -90,3 +94,27 @@ git config --global https.proxy http://127.0.0.1:7890
 #### 解决方案
 
 使用` git config --global core.autocrlf true ` 来自动转换换行符和回车换行符
+
+### ==Another== git process seems to be running in this repository
+
+#### 错误信息
+
+```bash
+fatal: Unable to create 'D:/Github Responsitories/hdujsjtw.zuzhi/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+```
+
+![image-20210417135233400](picture/image-20210417135233400.png)	
+
+#### 原因
+
+Git在使用过程中遭遇了奔溃，部分被上锁资源没有被释放导致的。
+
+#### 解决方案
+
+进入项目文件夹下的 .git文件中（显示隐藏文件夹或rm .git/index.lock）删除index.lock文件即可。
