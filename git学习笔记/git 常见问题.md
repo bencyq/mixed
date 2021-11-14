@@ -14,6 +14,28 @@
 
 ## 出现无法 push/pull 的现象
 
+### OpenSSL SSL_connect
+
+#### 错误信息
+
+![image-20211114150501664](picture/image-20211114150501664.png)
+
+#### 原因
+
+使用了代理或者VPN
+
+#### 解决方案
+
+1. 如果使用了代理，[跳转至解决方案](#跳转1)
+
+2. 如果使用了VPN，则输入
+
+    `git config --global --unset http.proxy`
+
+    `git config --global --unset https.proxy`
+
+    来删除`config`
+
 ### port  ==443==：Timed out
 
 #### 错误信息
@@ -33,8 +55,12 @@ git提示Failed to connect to github.com port 443: Timed out
 443 报错是因为出现了网络问题：
 
 1. 是否使用了代理
+
 2. 代理的节点是否有问题
+
 3. git 是否认定该代理是安全的
+
+<a name="跳转1">  </a>
 
 #### 解决方案一
 
@@ -75,7 +101,7 @@ git config --global https.proxy http://127.0.0.1:7890
 
 ### warning: LF will be replaced by ==CRLF==
 
-#### 错位信息
+#### 错误信息
 
 `warning: LF will be replaced by CRLF`
 
